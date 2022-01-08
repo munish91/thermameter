@@ -1,72 +1,28 @@
 
-// BY USING ONCHANGE METHOD----------------------------
+const  getTemperature = ()=>{
+	let temp = document.getElementById('temp');
+	temp.innerHTML = "&#xf2cb";
+	temp.style.color = "#000000";
 
-// const val = ()=>{
-//       let selectedVal = document.getElementById('selectedVal').value;
+	setTimeout(()=>{
+       temp.innerHTML = "&#xf2ca";
+       temp.style.color = "#f8b627";
+	},1000);
 
-// 	      return selectedVal;
-	      
-//       }
+	setTimeout(()=>{
+       temp.innerHTML = "&#xf2c9";
+	},2000);
 
-// const convertTemp = ()=>{
-// 	const tempNum = document.getElementById('tempNum').value;
-// 	let selectedOption = val();
+	setTimeout(()=>{
+       temp.innerHTML = "&#xf2c8";
+	},3000);
 
-// 	const fahToCel = (cel)=>{
-//             let celius = Math.round((tempNum - 32) * 5/9);
-
-//             return celius;
-// 	}
-
-// 	const celToFah = (fah)=>{
-//             let faranhite = Math.round((tempNum * 9/5) + 32);
-
-//             return faranhite;
-// 	}
-      
-//       let result;
-
-//       if (selectedVal == 'cel') {
-//       	result = fahToCel(tempNum);
-//       	document.getElementById('result').innerHTML= `${result}Celcius`;
-//       }
-//       else{
-//       	result = celToFah(tempNum);
-//       	document.getElementById('result').innerHTML= `${result}Celcius`;
-//       }	    
-   
-// }
-
-
-
-//  BY USING SELECTED INDEX METHOD----------------------------------
-const convertTemp = ()=>{
-	const tempNum = document.getElementById('tempNum').value;
-	const tempValue = document.getElementById('selectedVal');
-	const selectedOption = selectedVal.options[tempValue.selectedIndex].value;
-
-
-	const fahToCel = (cel)=>{
-            let celius = Math.round((tempNum - 32) * 5/9);
-
-            return celius;
-	}
-
-	const celToFah = (fah)=>{
-            let faranhite = Math.round((tempNum * 9/5) + 32);
-
-            return faranhite;
-	}
-      
-      let result;
-
-      if (selectedOption == 'cel') {
-      	result = fahToCel(tempNum);
-      	document.getElementById('result').innerHTML= `${result}Celcius`;
-      }
-      else{
-      	result = celToFah(tempNum);
-      	document.getElementById('result').innerHTML= `${result}Celcius`;
-      }	    
-   
+	setTimeout(()=>{
+       temp.innerHTML = "&#xf2c7";
+       temp.style.color = "#d63031";
+	},4000);
 }
+
+getTemperature();
+
+setInterval(getTemperature, 5000);

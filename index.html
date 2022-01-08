@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Temp Calculator</title>
+  <title>Thermameter</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,24 +12,16 @@
 <body> 
  
 <div class="container">
-  <h2>Temperature Calculator</h2>
+  <h2>Temperature</h2>
   <div class="card">
     <div class="card-body">
-      <h4>Please enter the temperature you would like to convert</h4>
-      <form onsubmit="convertTemp(); return false">
-          <input type="number" name="tempNum" id="tempNum">
-          <select onchange="val()" id="selectedVal">
-             <option value="fah">Faranhite</option>
-             <option value="cel">Celcius</option>
-          </select>
-          <input type="submit" name="submit">
-
-          <h4 id="result"></h4>
-      </form>
+      <h1>I am thermameter <span id="temp" class="fa"></span></h1>
     </div>
   </div>
 </div>
   
+
+<script src="https://kit.fontawesome.com/a076d05399.js" ></script>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
