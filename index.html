@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Temp Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body> 
+ 
+<div class="container">
+  <h2>Temperature Calculator</h2>
+  <div class="card">
+    <div class="card-body">
+      <h4>Please enter the temperature you would like to convert</h4>
+      <form onsubmit="convertTemp(); return false">
+          <input type="number" name="tempNum" id="tempNum">
+          <select onchange="val()" id="selectedVal">
+             <option value="fah">Faranhite</option>
+             <option value="cel">Celcius</option>
+          </select>
+          <input type="submit" name="submit">
+
+          <h4 id="result"></h4>
+      </form>
+    </div>
+  </div>
+</div>
+  
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
